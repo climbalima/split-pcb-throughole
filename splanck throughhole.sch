@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:splanck throughhole-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -643,7 +644,7 @@ Text GLabel 8800 2050 0    60   Input ~ 0
 col5
 Text GLabel 5850 2350 0    60   Input ~ 0
 row0
-Text GLabel 5800 2900 0    60   Input ~ 0
+Text GLabel 5850 2900 0    60   Input ~ 0
 row1
 Text GLabel 5850 4000 0    60   Input ~ 0
 row3
@@ -669,7 +670,7 @@ Text GLabel 3650 3100 2    60   Input ~ 0
 row2
 Text GLabel 3650 3200 2    60   Input ~ 0
 row3
-Text GLabel 1200 4500 0    60   Input ~ 0
+Text GLabel 1200 2200 0    60   Input ~ 0
 data
 $Comp
 L XLR3 K1
@@ -683,30 +684,15 @@ F 3 "" H 5100 1250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SW_PUSH SW25
-U 1 1 574BD152
-P 10300 4950
-F 0 "SW25" H 10450 5060 50  0000 C CNN
-F 1 "SW_PUSH" H 10300 4870 50  0000 C CNN
-F 2 "Buttons_Switches_SMD:SW_SPST_FSMSM" H 10300 4950 50  0001 C CNN
-F 3 "" H 10300 4950 50  0000 C CNN
-	1    10300 4950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1200 1700 10600 4950
-Wire Wire Line
-	1200 2600 10000 4950
-$Comp
 L GND #PWR01
 U 1 1 574BF981
-P 3650 3600
-F 0 "#PWR01" H 3650 3350 50  0001 C CNN
-F 1 "GND" H 3650 3450 50  0000 C CNN
-F 2 "" H 3650 3600 50  0000 C CNN
-F 3 "" H 3650 3600 50  0000 C CNN
-	1    3650 3600
-	1    0    0    -1  
+P 3650 2100
+F 0 "#PWR01" H 3650 1850 50  0001 C CNN
+F 1 "GND" H 3650 1950 50  0000 C CNN
+F 2 "" H 3650 2100 50  0000 C CNN
+F 3 "" H 3650 2100 50  0000 C CNN
+	1    3650 2100
+	0    -1   -1   0   
 $EndComp
 $Comp
 L GND #PWR02
@@ -743,4 +729,26 @@ F 3 "" H 1200 2500 50  0000 C CNN
 $EndComp
 Text GLabel 4750 1250 0    60   Input ~ 0
 data
+$Comp
+L TEST_1P W1
+U 1 1 576620E6
+P 5100 850
+F 0 "W1" H 5100 1120 50  0000 C CNN
+F 1 "TEST_1P" H 5100 1050 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_0-8mmDrill" H 5300 850 50  0001 C CNN
+F 3 "" H 5300 850 50  0000 C CNN
+	1    5100 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 576655BB
+P 1200 2600
+F 0 "#PWR?" H 1200 2350 50  0001 C CNN
+F 1 "GND" H 1200 2450 50  0000 C CNN
+F 2 "" H 1200 2600 50  0000 C CNN
+F 3 "" H 1200 2600 50  0000 C CNN
+	1    1200 2600
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
